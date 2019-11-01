@@ -1,0 +1,39 @@
+﻿
+@model MyfirstWeb.Models.WebUser
+@using (var form = Html.BeginForm())
+{
+    @Html.ValidationSummary()
+    <div>
+        @Html.LabelFor(m => m.FirstName)
+        @Html.TextBoxFor(m => m.FirstName)
+        @Html.ValidationMessageFor(m => m.FirstName)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.LastName)
+        @Html.TextBoxFor(m => m.LastName)
+        @Html.ValidationMessageFor(m => m.LastName)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.MailAddress)
+        @Html.TextBoxFor(m => m.MailAddress)
+        @Html.ValidationMessageFor(m => m.MailAddress)
+    </div>
+
+
+    <div>
+        @Html.LabelFor(m => m.MailAddressRepeated)
+        @Html.TextBoxFor(m => m.MailAddressRepeated)
+        @Html.ValidationMessageFor(m => m.MailAddressRepeated)
+    </div>
+
+    <div>
+        @Html.LabelFor(m => m.MemberId)
+        @Html.TextBoxFor(m => m.MemberId)
+        @Html.ValidationMessageFor(m => m.MemberId)
+    </div>
+
+    <input type="submit" value="Submit" />
+
+}
